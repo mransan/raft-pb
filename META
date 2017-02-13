@@ -1,0 +1,6 @@
+version = "0.1.0"
+description = "Message library using protobuf for RAFT"
+requires = "raft ocaml-protoc"
+archive(byte) = "raft-pb.cma"
+archive(native) = "raft-pb.cmxa"
+exists_if = "raft-pb.cma"
