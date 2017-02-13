@@ -127,3 +127,15 @@ let append_entries_response_of_pb pb =
     receiver_term;
     result = append_entries_response_result_of_pb result;
   }
+
+let message_to_pb = function 
+  | T.Request_vote_request 	 	x -> P.Request_vote_request 	 	(request_vote_request_to_pb x)
+  | T.Request_vote_response  	x -> P.Request_vote_response  	(request_vote_response_to_pb x)
+  | T.Append_entries_request 	x -> P.Append_entries_request 	(append_entries_request_to_pb x)
+  | T.Append_entries_response	x -> P.Append_entries_response	(append_entries_response_to_pb x)
+
+let message_of_pb = function 
+  | P.Request_vote_request 	 	x -> T.Request_vote_request 	 	(request_vote_request_of_pb x)
+  | P.Request_vote_response  	x -> T.Request_vote_response  	(request_vote_response_of_pb x)
+  | P.Append_entries_request 	x -> T.Append_entries_request 	(append_entries_request_of_pb x)
+  | P.Append_entries_response	x -> T.Append_entries_response	(append_entries_response_of_pb x)

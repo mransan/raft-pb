@@ -21,7 +21,7 @@ lib.byte:
 	$(OCB) $(LIB_NAME).cma
 
 LIB_FILES+=raft_pb
-#LIB_FILES+=raft_pb_conv
+LIB_FILES+=raft_pb_conv
 
 LIB_BUILD     =_build/src/
 LIB_INSTALL   = META 
